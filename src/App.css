@@ -13,6 +13,21 @@
   }
 }
 
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  table,
+  table * {
+    border: none !important;
+  }
+
+  .others-n-affricates {
+    page-break-after: always;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
