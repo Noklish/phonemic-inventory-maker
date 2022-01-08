@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PhonemeCell from '../common/phonemeCell'
 
 const NonPulmonicChart = props => {
+    const [customEjectives, setCustomEjectives] = useState([])
+    const [newSym, setNewSym] = useState('')
+    const [newLab, setNewLab] = useState('')
+
+    const renderForm = () => {
+        return <td className="no-print">
+            <div className="input-group my-1">
+                <span className="input-group-text">Symbol</span>
+                <input className="form-control" onChange={e => setNewSym(e.target.value)} />
+            </div>
+            <div className="input-group my-1">
+                <span className="input-group-text">Label</span>
+                <input className="form-control" onChange={e => setNewLab(e.target.value)} />
+            </div>
+            <button type="button" className="btn btn-sm btn-success w-100 mb-1" onClick={() => setCustomEjectives([...customEjectives, {name: newSym, label: newLab}])}>+</button>
+        </td>
+    }
+
     return (
         <>
-            {props.printerMode ? <h2>Non-Pulmonic Consonants</h2> : ''}
+            <h2 className="mt-3">Non-Pulmonic Consonants</h2>
             <div className="table-responsive">
                 <table className={`table align-middle d-print-table ${!props.printerMode && 'table-bordered'}`}>
                     <thead>
@@ -38,8 +56,14 @@ const NonPulmonicChart = props => {
                         <tr>
                             <PhonemeCell {...props} phonemeLeft="ǁ" label="Alveolar Lateral" />
                             <PhonemeCell {...props} phonemeLeft="ʛ" label="Uvular" />
-                            <PhonemeCell {...props} label="ʼ etc..." />
+                            {!!customEjectives.length && <PhonemeCell {...props} phonemeLeft={customEjectives[0].name} label={customEjectives[0].label} />}
+                            {!customEjectives.length && !props.printerMode && renderForm()}
                         </tr>
+                        {!!customEjectives.length && <tr>
+                            <PhonemeCell />
+                            <PhonemeCell />
+                            {!props.printerMode && renderForm()}
+                        </tr>}
                     </tbody>
                 </table>
             </div>

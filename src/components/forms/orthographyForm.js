@@ -5,7 +5,8 @@ class OrthographyForm extends React.Component {
         super(props)
 
         this.state = {
-            symbolsList: []
+            symbolsList: [],
+            syllableType: ''
         }
     }
 
@@ -28,44 +29,60 @@ class OrthographyForm extends React.Component {
             <>
                 <h2>Orthography</h2>
                 {!this.props.printerMode ? <p>If you care to, add transliterations for the phonemes in your inventory here</p> : ''}
-                {!this.props.printerMode ? <ul>
-                    {this.state.symbolsList.map(symbol => {
-                        return <li className="my-2" key={symbol.name}>
-                            <label className="mx-2" htmlFor={symbol.name + '_ortho'}>{symbol.name}</label>
-                            <input
-                                id={symbol.name + '_ortho'}
-                                value={symbol.description}
-                                type="text"
-                                onChange={e => {
-                                    const desc = e?.currentTarget?.value
-                                    const newSymList = this.state.symbolsList
-                                    const targetItem = newSymList.find(sym => sym.name === symbol.name)
-                                    if (targetItem) {
-                                        targetItem.description = desc
-                                        this.setState({
-                                            symbolsList: newSymList
-                                        })
-                                    }
-                                }}
-                            />
-                        </li>
-                    })}
-                </ul> : <table className="table">
-                    <thead>
-                        <tr>
-                            <th role="col">Symbol</th>
-                            <th role="col">Transliteration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                {!this.props.printerMode ? <div className="row">
+                    <ul className="col-8">
                         {this.state.symbolsList.map(symbol => {
-                            return <tr key={symbol.name + '_ortho'}>
-                                <th role="row">{symbol.name}</th>
-                                <td>{symbol.description || '-'}</td>
-                            </tr>
+                            return <li className="my-2" key={symbol.name}>
+                                <div className="input-group">
+                                    <span className="input-group-text col-1">{symbol.name}</span>
+                                    <input
+                                        className="form-control"
+                                        id={symbol.name + '_ortho'}
+                                        value={symbol.description}
+                                        type="text"
+                                        onChange={e => {
+                                            const desc = e?.currentTarget?.value
+                                            const newSymList = this.state.symbolsList
+                                            const targetItem = newSymList.find(sym => sym.name === symbol.name)
+                                            if (targetItem) {
+                                                targetItem.description = desc
+                                                this.setState({
+                                                    symbolsList: newSymList
+                                                })
+                                            }
+                                        }}
+                                    />
+                                    </div>
+                            </li>
                         })}
-                    </tbody>
-                </table>}
+                    </ul>
+                    <div className="col-3">
+                        <label htmlFor="syllable-type">Syllable type:</label>
+                        <input id="syllable-type" type="text" className="form-control" onChange={e => this.setState({ syllableType: e.target.value })} />
+                    </div>
+                </div> : <div className="row">
+                    <div className="col-8">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th role="col">Symbol</th>
+                                    <th role="col">Transliteration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.state.symbolsList.map(symbol => {
+                                    return <tr key={symbol.name + '_ortho'}>
+                                        <th role="row">{symbol.name}</th>
+                                        <td>{symbol.description || '-'}</td>
+                                    </tr>
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="col-3 fw-bold">
+                        Syllable Type: {this.state.syllableType}
+                    </div>
+                </div>}
             </>
         )
     }

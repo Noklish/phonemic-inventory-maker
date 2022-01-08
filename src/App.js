@@ -48,7 +48,7 @@ class App extends React.Component {
         <hr />
         {!printerMode && <div className="w-100 my-3">
           <label htmlFor="title">Give your conlang a name: </label>
-          <input style={{marginLeft: '1rem'}} type="text" onChange={e => this.setState({ title: e.currentTarget.value })} value={this.state.title} />
+          <input className="form-control" style={{marginLeft: '1rem'}} type="text" onChange={e => this.setState({ title: e.currentTarget.value })} value={this.state.title} />
         </div>}
         <PulmonicChart listName={PULMONICS} activeList={this.state.pulmonicsList} addtoList={this.addtoList} removeFromList={this.removeFromList} printerMode={printerMode} />
         <NonPulmonicChart listName={NON_PULMONICS} activeList={this.state.nonPulmonicsList} addtoList={this.addtoList} removeFromList={this.removeFromList} printerMode={printerMode} />
