@@ -4,7 +4,7 @@ import PhonemeCell from '../common/phonemeCell'
 const PulmonicChart = props => {
     return (
         <>
-            {props.printerMode ? <h2>Pulmonic Consonants</h2> : ''}
+            <h2 className="mt-3">Pulmonic Consonants</h2>
             <div className="table-responsive">
                 <table className={`table align-middle d-print-table ${!props.printerMode && 'table-bordered'}`}>
                     <thead>

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PhonemeCell from '../common/phonemeCell'
 
 const AffricatesChart = props => {
+    const [customAffricates, setCustomAffricates] = useState([])
+    const [newSym, setNewSym] = useState('')
+    const [newLab, setNewLab] = useState('')
+
     return (
         <div className="table-responsive">
             <table className={`table d-print-table align-middle ${!props.printerMode && 'table-bordered'}`}>
@@ -35,6 +39,24 @@ const AffricatesChart = props => {
                     <tr className={props.printerMode && !props.activeList.includes("ɖ͡ʐ") && 'no-print'}>
                         <PhonemeCell {...props} phonemeLeft="ɖ͡ʐ" label="Voiceless retroflex affricate" />
                     </tr>
+                    {!!customAffricates.length && customAffricates.map(affricate => {
+                        return <tr>
+                            <PhonemeCell {...props} phonemeLeft={affricate.name} label={affricate.label} />
+                        </tr>
+                    })}
+                    {!props.printerMode && <tr>
+                        <td className="no-print">
+                            <div className="input-group my-1">
+                                <span className="input-group-text">Symbol</span>
+                                <input className="form-control" onChange={e => setNewSym(e.target.value)} />
+                            </div>
+                            <div className="input-group my-1">
+                                <span className="input-group-text">Label</span>
+                                <input className="form-control" onChange={e => setNewLab(e.target.value)} />
+                            </div>
+                            <button type="button" className="btn btn-sm btn-success w-100 mb-1" onClick={() => setCustomAffricates([...customAffricates, {name: newSym, label: newLab}])}>+</button>
+                        </td>
+                    </tr>}
                 </tbody>
             </table>
         </div>
