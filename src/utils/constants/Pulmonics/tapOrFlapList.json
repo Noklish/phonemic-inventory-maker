@@ -1,0 +1,137 @@
+{
+  "name": "Tap Or Flap",
+  "list": [
+    {
+      "name": "Bilabial",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Labio-dental",
+      "width": 1,
+      "left": {
+        "name": "ⱱ",
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Dental",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Alveolar",
+      "width": 2,
+      "left": {
+        "name": "ɾ",
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Post-Alveolar",
+      "width": 0,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Retroflex",
+      "width": 1,
+      "left": {
+        "name": "ɽ",
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Palatal",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Velar",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Uvular",
+      "width": 1,
+      "left": {
+        "name": "ʀ",
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Pharyngeal",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    },
+    {
+      "name": "Glottal",
+      "width": 1,
+      "left": {
+        "name": null,
+        "active": false
+      },
+      "right": {
+        "name": null,
+        "active": false
+      }
+    }
+  ]
+}

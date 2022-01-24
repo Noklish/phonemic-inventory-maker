@@ -26,7 +26,7 @@ class App extends React.Component {
   addtoList = (targetList, newItem) => {
     this.setState({
       [targetList]: [...this.state?.[targetList], newItem]
-    })
+    }, () => console.log(this.state))
   }
 
   removeFromList = (targetList, itemToRemove) => {

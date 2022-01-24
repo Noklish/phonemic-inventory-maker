@@ -1,0 +1,138 @@
+{
+    "name": "Tap Or Flap",
+    "list": [
+      {
+        "name": "Bilabial",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Labio-dental",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Dental",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Alveolar",
+        "width": 1,
+        "left": {
+          "name": "ɬ",
+          "active": false
+        },
+        "right": {
+          "name": "ɮ",
+          "active": false
+        }
+      },
+      {
+        "name": "Post-Alveolar",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Retroflex",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Palatal",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Velar",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Uvular",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Pharyngeal",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      },
+      {
+        "name": "Glottal",
+        "width": 1,
+        "left": {
+          "name": null,
+          "active": false
+        },
+        "right": {
+          "name": null,
+          "active": false
+        }
+      }
+    ]
+  }
+  

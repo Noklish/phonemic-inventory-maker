@@ -1,0 +1,137 @@
+{
+  "name": "Tap Or Flap",
+  "list": [
+    {
+      "name": "Bilabial",
+      "width": 1,
+      "left": {
+        "name": "ɸ",
+        "active": false
+      },
+      "right": {
+        "name": "β",
+        "active": false
+      }
+    },
+    {
+      "name": "Labio-dental",
+      "width": 1,
+      "left": {
+        "name": "f",
+        "active": false
+      },
+      "right": {
+        "name": "v",
+        "active": false
+      }
+    },
+    {
+      "name": "Dental",
+      "width": 1,
+      "left": {
+        "name": "θ",
+        "active": false
+      },
+      "right": {
+        "name": "ð",
+        "active": false
+      }
+    },
+    {
+      "name": "Alveolar",
+      "width": 1,
+      "left": {
+        "name": "s",
+        "active": false
+      },
+      "right": {
+        "name": "z",
+        "active": false
+      }
+    },
+    {
+      "name": "Post-Alveolar",
+      "width": 0,
+      "left": {
+        "name": "ʃ",
+        "active": false
+      },
+      "right": {
+        "name": "ʒ",
+        "active": false
+      }
+    },
+    {
+      "name": "Retroflex",
+      "width": 1,
+      "left": {
+        "name": "ʂ",
+        "active": false
+      },
+      "right": {
+        "name": "ʐ",
+        "active": false
+      }
+    },
+    {
+      "name": "Palatal",
+      "width": 1,
+      "left": {
+        "name": "ç",
+        "active": false
+      },
+      "right": {
+        "name": "ʝ",
+        "active": false
+      }
+    },
+    {
+      "name": "Velar",
+      "width": 1,
+      "left": {
+        "name": "x",
+        "active": false
+      },
+      "right": {
+        "name": "ɣ",
+        "active": false
+      }
+    },
+    {
+      "name": "Uvular",
+      "width": 1,
+      "left": {
+        "name": "χ",
+        "active": false
+      },
+      "right": {
+        "name": "ʁ",
+        "active": false
+      }
+    },
+    {
+      "name": "Pharyngeal",
+      "width": 1,
+      "left": {
+        "name": "ħ",
+        "active": false
+      },
+      "right": {
+        "name": "ʕ",
+        "active": false
+      }
+    },
+    {
+      "name": "Glottal",
+      "width": 1,
+      "left": {
+        "name": "h",
+        "active": false
+      },
+      "right": {
+        "name": "ɦ",
+        "active": false
+      }
+    }
+  ]
+}
